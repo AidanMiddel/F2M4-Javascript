@@ -7,6 +7,66 @@
     <title>Document</title>
 </head>
 <body>
-    <p>Hello world!</p>
+    <h1>mijn pagina</h1>
+    <p>eerste </p>
+    <p>tweede</p>
+    <p>derde</p>
+
+    <input type="button" value="reset" id="myButton">
+    
+    <script>
+        let alineas = document.getElementsByTagName('p')
+        const myButton = document.getElementById('myButton');
+        let colors = ['yellow','green','orange'];
+        let textColors = ['orange','yellow','green'];
+        let bodyColors = ['green','orange','yellow']
+
+        for(let i=0; i<alineas.length;i++){
+            alineas[i].addEventListener('click',(evt) => {
+                setAchtergrond(i);
+                setTextColor(i);
+            });
+        }
+
+        function setAchtergrond(i){
+            alineas[i].style.background = colors[i]
+            document.body.style.background = bodyColors[i];
+
+        }
+        function setTextColor(i){
+            alineas[i].style.color = textColors[i]
+        }
+
+        myButton.addEventListener('click', () => {
+            for(let i =0; i<alineas.length; i++){
+                alineas[i].style.background = "white"
+                alineas[i].style.color = "black"
+            }
+            document.body.style.background = "white"
+        })
+
+        
+        // let myP = document.getElementsByTagName('p');
+
+        // myP[0].addEventListener('click', clickHandler0);
+        // myP[1].addEventListener('click', clickHandler1);
+        // myP[2].addEventListener('click', clickHandler2);
+
+        
+        // function clickHandler0(){
+        //     document.body.style.background = "yellow"
+        //     document.body.style.color = "orange"
+        // }
+        
+        // function clickHandler1(){
+        //     document.body.style.background = "green"
+        //     document.body.style.color = "blue"
+        // }
+        
+        // function clickHandler2(){
+        //     document.body.style.background = "red"
+        //     document.body.style.color = "blue"
+        // }
+    </script>
 </body>
 </html>
