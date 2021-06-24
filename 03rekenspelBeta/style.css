@@ -1,0 +1,29 @@
+body{
+    background: lightblue;
+}
+
+#container{
+    width: 30em;
+    height: 10em;
+    margin: auto;
+    margin-top: 10em;
+    border-radius: 20px;
+    padding: 1em;
+    border: black 4px solid;
+    background: aliceblue;
+}
+
+#opgaveblad{
+    background: orange;
+    padding: 40px;
+    text-align: center;
+    font-size: 40px;
+    font-family: "Copperplate", Fantasy;
+}
+
+#antwoordenblad{
+    background: yellow;
+    color:white;
+    padding: 5px;
+    justify-content: center;
+}
